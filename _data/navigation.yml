@@ -16,7 +16,7 @@ zh:
     /cv/: 简历
     /teaching/: 教学
     /people/: 成员
-    /dropdown/: 更多
+    /_pages/dropdown/: 更多
     /books/: 书架
 
 en:
@@ -37,5 +37,5 @@ en:
     /cv/: CV
     /teaching/: Teaching
     /people/: People
-    /dropdown/: More
+    /_pages/dropdown/: More
     /books/: Bookshelf
