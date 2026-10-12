@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" role="img" aria-labelledby="portrait-title portrait-description">
+  <title id="portrait-title">Portrait placeholder</title>
+  <desc id="portrait-description">A neutral silhouette. Replace this image with your own portrait.</desc>
+  <defs>
+    <clipPath id="portrait-boundary">
+      <circle cx="200" cy="200" r="200" />
+    </clipPath>
+  </defs>
+  <g clip-path="url(#portrait-boundary)">
+    <circle cx="200" cy="200" r="200" fill="#e5e7eb" />
+    <circle cx="200" cy="142" r="65" fill="#9ca3af" />
+    <ellipse cx="200" cy="345" rx="130" ry="125" fill="#9ca3af" />
+  </g>
+</svg>
