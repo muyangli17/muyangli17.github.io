@@ -9,6 +9,8 @@ on:
       - "assets/rendercv/design.yaml"
       - "assets/rendercv/locale.yaml"
       - "assets/rendercv/settings.yaml"
+      - "requirements.txt"
+      - ".github/workflows/render-cv.yml"
   workflow_call:
   workflow_dispatch:
 permissions:
@@ -42,7 +44,7 @@ jobs:
             echo "Missing RenderCV config file!"
             exit 1
           fi
-          rendercv render $cv_file --settings $settings
+          rendercv render "$cv_file" --settings "$settings" --design "$rendercv_dir/design.yaml" --locale-catalog "$rendercv_dir/locale.yaml"
           rm assets/rendercv/rendercv_output/*.typ
       - name: Upload rendercv_output as an artifact
         uses: actions/upload-artifact@v7
@@ -53,6 +55,11 @@ jobs:
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-          git add -A
+          git add assets/rendercv/rendercv_output
+          if git diff --cached --quiet; then
+            echo "The generated CV is already up to date."
+            exit 0
+          fi
           git commit -m "chore: render the latest CV"
+          git pull --rebase
           git push

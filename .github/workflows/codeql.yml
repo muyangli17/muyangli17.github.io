@@ -22,6 +22,8 @@ on:
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
+    # Private repositories must enable Code scanning before opting in with this variable.
+    if: github.event.repository.private == false || vars.ENABLE_CODE_SCANNING == 'true'
     # Runner size impacts CodeQL analysis time. To learn more, please see:
     #   - https://gh.io/recommended-hardware-resources-for-running-codeql
     #   - https://gh.io/supported-runners-and-hardware-resources

@@ -5,3 +5,9 @@ design:
     size: a4
     show_footer: false
     show_top_note: false
+  templates:
+    education_entry:
+      degree_column: null
+      main_column: "**DEGREE**, **INSTITUTION**, AREA\nSUMMARY\nHIGHLIGHTS"
+    publication_entry:
+      main_column: "**TITLE**\nSUMMARY\nAUTHORS\nJOURNAL\nFULL_TEXT"
