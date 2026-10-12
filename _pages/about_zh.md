@@ -1,11 +1,11 @@
 ---
 layout: about
 title: 关于我
-permalink: /zh/
+permalink: /
 lang: zh-CN
 nav: false
 description: 中文个人主页模板，请将占位内容替换为你的学术背景与研究介绍。
-translation_url: /
+translation_url: /en/
 translation_lang: en
 translation_label: English
 translation_aria_label: 切换至英文首页

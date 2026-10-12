@@ -505,7 +505,7 @@ gem "al_folio_core", path: "../al-folio-core"
 
 ### Bilingual homepages
 
-This personal site has an English homepage at `/` ([`_pages/about.md`](../_pages/about.md)) and a Chinese homepage at `/zh/` ([`_pages/about_zh.md`](../_pages/about_zh.md)). Replace the bracketed placeholders in each file with your own content. The two pages share the portrait under `assets/img/`; update `profile.image` in both files when replacing it.
+This personal site opens in Chinese at `/` ([`_pages/about_zh.md`](../_pages/about_zh.md)), with an English homepage at `/en/` ([`_pages/about.md`](../_pages/about.md)). The former `/zh/` address redirects to the Chinese homepage through [`_pages/zh_redirect.md`](../_pages/zh_redirect.md). Replace the bracketed placeholders in each homepage with your own content. The two pages share the portrait under `assets/img/`; update `profile.image` in both files when replacing it.
 
 The language controls use each page's `translation_url`, `translation_lang`, `translation_label`, and `translation_aria_label`. Keep the links reciprocal. `lang` declares the page language; it does not translate content automatically. The Chinese homepage sets `nav: false` so it does not appear alongside the shared English navigation items.
 

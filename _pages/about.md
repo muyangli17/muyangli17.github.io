@@ -1,10 +1,10 @@
 ---
 layout: about
 title: About
-permalink: /
+permalink: /en/
 lang: en
 description: English homepage template. Replace the placeholders with your academic profile.
-translation_url: /zh/
+translation_url: /
 translation_lang: zh-CN
 translation_label: 中文
 translation_aria_label: Switch to the Chinese homepage
