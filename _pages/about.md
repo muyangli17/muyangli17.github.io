@@ -1,34 +1,80 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+lang: en
+description: English homepage template. Replace the placeholders with your academic profile.
+translation_url: /zh/
+translation_lang: zh-CN
+translation_label: 中文
+translation_aria_label: Switch to the Chinese homepage
+language_label: English
+language_navigation_label: Choose a language
+subtitle: "[Your position] · [Your department] · [Your university]"
 
 profile:
   align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image_circular: true
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>[Your department]</p>
+    <p>[Your university]</p>
+    <p>[City, Country]</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+selected_papers: false
+social: false
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<nav aria-label="{{ page.language_navigation_label }}" style="display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+  <span lang="{{ page.lang }}" aria-current="true" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; font-weight: 600;">
+    {{ page.language_label }}
+  </span>
+  <a
+    href="{{ page.translation_url | relative_url }}"
+    lang="{{ page.translation_lang }}"
+    hreflang="{{ page.translation_lang }}"
+    aria-label="{{ page.translation_aria_label }}"
+    style="display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 14px; border: 1px solid currentColor; border-radius: 6px; text-decoration: none;"
+  >
+    {{ page.translation_label }}
+  </a>
+</nav>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+## About me
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am **[Your name]**, a **[Your position]** in **[Your department]** at **[Your university]**.
+My research focuses on **[Research area]**. I am particularly interested in **[A problem you want to solve]**.
+
+## Research interests
+
+- **[Research direction 1]** — [A short description of the topic].
+- **[Research direction 2]** — [A short description of the topic].
+- **[Research direction 3]** — [A short description of the topic].
+
+## Education
+
+- **[Start year–Present]** · [Degree], [University].
+- **[Start year–End year]** · [Degree], [University].
+
+## Selected work
+
+- **[Project or publication title]** — [Your contribution and a short summary].
+- **[Project or publication title]** — [Your contribution and a short summary].
+
+[Browse publications]({{ '/publications/' | relative_url }}) · [View my CV]({{ '/cv/' | relative_url }})
+
+## Contact
+
+- **Email:** [Your email address].
+- **Office:** [Building, Room, University].
+- **Collaboration:** [Topics you would like to discuss].

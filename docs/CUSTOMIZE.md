@@ -33,6 +33,7 @@ Here we will give you some tips on how to customize the website. One important t
     - [Why trophies are off by default](#why-trophies-are-off-by-default)
       - [Migrating from github-readme-stats](#migrating-from-github-readme-stats)
   - [Creating new pages](#creating-new-pages)
+    - [Bilingual homepages](#bilingual-homepages)
   - [Creating new blog posts](#creating-new-blog-posts)
   - [Creating new projects](#creating-new-projects)
   - [Adding some news](#adding-some-news)
@@ -501,6 +502,14 @@ For a one-site customization, prefer a local override over a plugin fork. Fork o
 gem "al_folio_core", git: "https://github.com/YOUR-USER/al-folio-core.git", branch: "my-fix"
 gem "al_folio_core", path: "../al-folio-core"
 ```
+
+### Bilingual homepages
+
+This personal site has an English homepage at `/` ([`_pages/about.md`](../_pages/about.md)) and a Chinese homepage at `/zh/` ([`_pages/about_zh.md`](../_pages/about_zh.md)). Replace the bracketed placeholders in each file with your own content. The two pages share the portrait under `assets/img/`; update `profile.image` in both files when replacing it.
+
+The language controls use each page's `translation_url`, `translation_lang`, `translation_label`, and `translation_aria_label`. Keep the links reciprocal. `lang` declares the page language; it does not translate content automatically. The Chinese homepage sets `nav: false` so it does not appear alongside the shared English navigation items.
+
+This first stage translates the homepage content and its language controls. The site name, navigation, footer, publications, and CV remain shared. News, blog previews, sample selected papers, and sample social links are disabled on both homepages until personal content is ready; enable the corresponding front matter settings after filling in your data. For a complete interface translation, follow the [local override workflow](ARCHITECTURE.md#local-overrides-your-site-vs-this-repo) for the owning plugin templates.
 
 ## Creating new blog posts
 
