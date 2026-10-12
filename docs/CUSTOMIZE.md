@@ -509,7 +509,9 @@ This personal site opens in Chinese at `/` ([`_pages/about_zh.md`](../_pages/abo
 
 The language controls use each page's `translation_url`, `translation_lang`, `translation_label`, and `translation_aria_label`. Keep the links reciprocal. `lang` declares the page language; it does not translate content automatically. The Chinese homepage sets `nav: false` so it does not appear alongside the shared English navigation items.
 
-This first stage translates the homepage content and its language controls. The site name, navigation, footer, publications, and CV remain shared. News, blog previews, sample selected papers, and sample social links are disabled on both homepages until personal content is ready; enable the corresponding front matter settings after filling in your data. For a complete interface translation, follow the [local override workflow](ARCHITECTURE.md#local-overrides-your-site-vs-this-repo) for the owning plugin templates.
+Top navigation labels, dropdown entries, and navigation button descriptions are translated in [`_data/navigation.yml`](../_data/navigation.yml). English and Chinese homepages explicitly select their language. On shared pages, [`assets/js/site-language.js`](../assets/js/site-language.js) remembers the selected navigation language; a first visit defaults to Chinese. The navigation's homepage and language links follow the same selection.
+
+The site name, footer, publications, and CV content remain shared. News, blog previews, sample selected papers, and sample social links are disabled on both homepages until personal content is ready; enable the corresponding front matter settings after filling in your data. The site uses an intentional [`_includes/header.liquid`](../_includes/header.liquid) override of `al_folio_core`, tracked in `.al-folio-overrides.yml`. Follow the [local override workflow](ARCHITECTURE.md#local-overrides-your-site-vs-this-repo) when updating it; CI runs `al-folio upgrade overrides audit --fail-on-stale` to detect drift.
 
 ## Creating new blog posts
 

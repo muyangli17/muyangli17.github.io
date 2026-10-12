@@ -8,6 +8,8 @@ on:
       - v1.0-dev
     paths:
       - "_config.yml"
+      - "_includes/**"
+      - ".al-folio-overrides.yml"
       - "_data/**"
       - "_pages/**"
       - "_posts/**"
@@ -24,6 +26,8 @@ on:
       - v1.0-dev
     paths:
       - "_config.yml"
+      - "_includes/**"
+      - ".al-folio-overrides.yml"
       - "_data/**"
       - "_pages/**"
       - "_posts/**"
@@ -49,6 +53,9 @@ jobs:
 
       - name: Run upgrade audit 🧪
         run: bundle exec al-folio upgrade audit
+
+      - name: Audit local template overrides
+        run: bundle exec al-folio upgrade overrides audit --fail-on-stale
 
       - name: Upload upgrade report 📄
         if: always()
