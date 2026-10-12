@@ -14,7 +14,7 @@ subtitle: "[Your position] · [Your department] · [Your university]"
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: profile_placeholder.svg
   image_circular: true
   more_info: >
     <p>[Your department]</p>
@@ -35,7 +35,7 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-<nav aria-label="{{ page.language_navigation_label }}" style="display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+<nav aria-label="{{ page.language_navigation_label }}" style="display: flex; min-width: 180px; justify-content: flex-end; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
   <span lang="{{ page.lang }}" aria-current="true" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; font-weight: 600;">
     {{ page.language_label }}
   </span>
